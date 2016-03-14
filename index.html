@@ -535,7 +535,7 @@ a:""})}var h=/\{\{(([@!]?)(.+?))\}\}(([\s\S]+?)(\{\{:\1\}\}([\s\S]+?))?)\{\{\/\1
 
 function refresh ()
 {  
-  var url = "http://192.168.0.101/rpc/get-light/run";
+  var url = "http://192.168.0.100/rpc/get-light/run";
   microAjax(url,function(data){
      data.split(' ').forEach (function (value, driver){
          var chk = $("#bk-"+driver +"> input")[0];
