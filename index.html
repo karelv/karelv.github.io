@@ -702,7 +702,7 @@ $(function () {
   $("div.bk-switch").bk_switch(function (element, checked) {
       var driver = element.id.split('-')[1];
       //console.log (driver);
-      var url = "http://192.168.0.101/rpc/set-light/run%20"+driver+"%20";
+      var url = "http://192.168.0.100/rpc/set-light/run%20"+driver+"%20";
       url += checked ? "1" : "0";
       microAjax(url,function(data){
          //console.log (data);
