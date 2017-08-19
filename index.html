@@ -535,7 +535,7 @@ a:""})}var h=/\{\{(([@!]?)(.+?))\}\}(([\s\S]+?)(\{\{:\1\}\}([\s\S]+?))?)\{\{\/\1
 
 function refresh ()
 {  
-  var url = "http://192.168.0.101/rpc/get-light/run";
+  var url = "http://192.168.0.100/rpc/get-light/run";
   microAjax(url,function(data){
      data.split(' ').forEach (function (value, driver){
          var chk = $("#bk-"+driver +"> input")[0];
@@ -702,7 +702,7 @@ $(function () {
   $("div.bk-switch").bk_switch(function (element, checked) {
       var driver = element.id.split('-')[1];
       //console.log (driver);
-      var url = "http://192.168.0.101/rpc/set-light/run%20"+driver+"%20";
+      var url = "http://192.168.0.100/rpc/set-light/run%20"+driver+"%20";
       url += checked ? "1" : "0";
       microAjax(url,function(data){
          //console.log (data);
